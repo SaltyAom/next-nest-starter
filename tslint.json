@@ -1,0 +1,24 @@
+{
+    "extends": ["tslint:recommended", "tslint-react"],
+    "rules": {
+        "quotemark": [true, "single", "jsx-double"],
+        "semicolon": [false, "always"],
+        "trailing-comma": [
+            false,
+            {
+                "singleline": "never",
+                "multiline": {
+                    "objects": "always",
+                    "arrays": "always",
+                    "functions": "never",
+                    "typeLiterals": "ignore"
+                },
+                "esSpecCompliant": true
+            }
+        ],
+        "object-literal-sort-keys": false,
+        "interface-name": false,
+        "no-empty-interface": false,
+        "prefer-const": false
+    }
+}

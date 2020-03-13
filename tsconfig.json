@@ -1,0 +1,54 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "jsx": "preserve",
+        "strict": false,
+        "pretty": true,
+        "noImplicitAny": false,
+        "alwaysStrict": false,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "outDir": ".next",
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "sourceMap": true,
+        "skipLibCheck": true,
+        "lib": ["es2017", "dom"],
+        "baseUrl": "./",
+        "paths": {
+            // Client Alias
+            "pages/*": ["pages/*"],
+            "views/*": ["pages/views/*"],
+            "public/*": ["client/public/*"],
+            "styles/*": ["client/public/styles"],
+            "fonts/*": ["client/public/fonts"],
+            "components/*": ["client/components/*"],
+            "~/*": ["client/*"],
+            "libs/*": ["client/libs/*"],
+            "pageTypes/*": ["client/pageTypes/*"],
+            "stores/*": ["client/stores/*"],
+            "layouts/*": ["client/layouts/*"],
+
+            // Server Alias
+            "src/*": ["src/*"],
+            "helpers/*": ["src/helpers/*"],
+            "@services/*": ["src/services/*"],
+            "@pipes/*": ["src/pipes/*"],
+            "@guards/*": ["src/guards/*"],
+            "@interceptors/*": ["src/interceptors/*"],
+            "@decorators/*": ["src/decorators/*"]
+        },
+        "typeRoots": ["node_modules/@types"],
+        "allowJs": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true
+    },
+    "exclude": ["node_modules"],
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+}
