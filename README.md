@@ -1,5 +1,6 @@
-# Enterprise Next-Nest Starter Template
-Combination of using Nextjs with Nestjs for an Enterprise-scale application.
+# Next-Nest Enterprise-scale Starter Template
+Starter template of Next.js with Nest.js for an Enterprise-scale application.
+  
 ![Enterprise-sama](https://www.spriters-resource.com/resources/sheet_icons/108/111095.png)
 
 ## Why?
