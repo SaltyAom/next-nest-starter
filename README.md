@@ -90,3 +90,19 @@ Dev structure
     * @guards - src/guards,
     * @interceptors - src/interceptors
     * @decorators - src/decorators
+
+* Scripts
+A configured scripts in package.json.
+* dev - Start development server.
+* build - Create production build.
+    * build:clean - Remove previous build.
+    * build:server - Build Nest.js production server.
+    * build:ui - Build Next.js production client.
+* start - Start production server.
+* format - Format development file based on `.prettierrc`.
+* test - Test suite.
+    * test:lint - Linter test.
+    * test:type - TypeScripts's type and aliased path tests.
+    * test:unit - Run Nest's unit-tests.
+    * test:client - Run Next.js tests.
+    * test:e2e - Run Nest's end-to-end tests.
