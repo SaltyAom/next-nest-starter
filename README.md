@@ -112,12 +112,7 @@ Mostly these structure isn't suitable on most serverless/Node hosting platform, 
 `Dockerfile` and `docker-compose.yml` is provided the help getting a quick start for testing app on production or setting up a contained environment.
 
 ### Using with Docker Compose:  
-Make sure to build Nextjs client before start docker-compose.
-```
-yarn build:ui
-```
-  
-Then, for the first time:
+For the first time:
 ```
 docker-compose up --build
 ```
