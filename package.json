@@ -5,7 +5,7 @@
     "author": "SaltyAom",
     "license": "MIT",
     "scripts": {
-        "dev": "nest start --watch --path tsconfig.server.json",
+        "dev": "NODE_ENV=development nest start --watch --path tsconfig.server.json",
         "build:clean": "rm -rf .next",
         "build:server": "nest build --path tsconfig.server.json",
         "build:ui": "next build",

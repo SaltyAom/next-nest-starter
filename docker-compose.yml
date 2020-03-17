@@ -1,0 +1,16 @@
+version: '3'
+services: 
+    nest:
+        build: ./
+        # For development
+        command: yarn dev
+        # For production
+        # command: yarn start
+        environment:
+            - NODE_ENV=production
+        ports: 
+            - '3000:3000'
+        working_dir: '/usr/src/app'
+        volumes:
+            - ./:/usr/src/app:cached
+            - /usr/src/app/node_modules

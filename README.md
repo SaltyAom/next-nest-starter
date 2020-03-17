@@ -106,3 +106,28 @@ A configured scripts in package.json.
     * test:unit - Run Nest's unit-tests.
     * test:client - Run Next.js tests.
     * test:e2e - Run Nest's end-to-end tests.
+
+## Docker Compose
+Mostly these structure isn't suitable on most serverless/Node hosting platform, dockerize a project looks like a most ideal way to solve the problem.
+`Dockerfile` and `docker-compose.yml` is provided the help getting a quick start for testing app on production or setting up a contained environment.
+
+### Using with Docker Compose:  
+Make sure to build Nextjs client before start docker-compose.
+```
+yarn build:ui
+```
+  
+Then, for the first time:
+```
+docker-compose up --build
+```
+  
+After Docker environment is created it will persisted which mean you don't have to rebuild everytime you want to start a dev environment:
+```
+docker-compose up
+```
+
+### Note
+* Combination of both Next and Nest is large, watching files change and restart the development server takes some time usually around 2-3 seconds but also depend on CPU its using.
+* To speed up server restart, you might also remove `NODE_ENV=development` in package.json's `dev` script, but as a result Next won't detect a file change.
+* If you're using `Fastify Adapter`, make sure you include `0.0.0.0` as second parameter in `listen()`.
