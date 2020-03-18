@@ -9,7 +9,7 @@
 # RUN yarn
 # COPY . .
 # 
-# RUN yarn build:ui
+# RUN yarn build
 # 
 # FROM node:12.13-alpine
 # 
@@ -22,7 +22,8 @@
 # 
 # COPY . .
 # COPY --from=builder /usr/src/app/.next .next
-# 
+# COPY --from=builder /usr/src/app/dist dist
+#
 # CMD yarn start
 # EXPOSE 3000
 
