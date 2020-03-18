@@ -7,6 +7,10 @@
 # COPY yarn.lock ./
 # 
 # RUN yarn
+# 
+# yarn has some problem with nest cli
+# RUN npm install -g @nestjs/cli
+#
 # COPY . .
 # 
 # RUN yarn build
